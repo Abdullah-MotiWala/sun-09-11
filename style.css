@@ -1,0 +1,68 @@
+/* id styleing does not override from class styling */
+#second-p {
+    background-color: green;
+}
+
+.first-p {
+    background-color: orange
+}
+
+.parent {
+    background-color: yellow;
+    width: 100vw;
+    height: 10rem;
+    font-weight: 1000;
+    font-size: 5rem;
+}
+
+.parent div {
+    background-color: turquoise;
+    border: 1px solid black;
+    height: 80%;
+    width: 80%;
+}
+
+.parent>div {
+    background-color: blue;
+    height: 80%;
+    width: 80%;
+}
+
+.parent>.child {
+    background-color: red;
+    height: 80%;
+    width: 80%;
+}
+
+.parent+.sibling {
+    background-color: brown;
+    width: 100vw;
+    height: 10rem;
+    margin: 5px;
+}
+
+.parent~div {
+    background-color: brown;
+    width: 100vw;
+    height: 10rem;
+    margin: 5px;
+}
+
+p.sibling-2 {
+    font-weight: 1000;
+    font-size: 10rem
+}
+
+.margin-5 {
+    margin: 10px
+}
+
+.heading-div{
+    width: 100vw;
+    height: 10rem;
+    background-color: #0000ff;
+}
+.heading-div+p{
+    margin-top: -10rem;
+    color:#fff
+}
