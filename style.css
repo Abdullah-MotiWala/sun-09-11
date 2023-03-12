@@ -24,7 +24,7 @@
 
 .parent>div {
     background-color: blue;
-    height: 80%;
+    /* height: 80%; */
     width: 80%;
 }
 
@@ -44,7 +44,7 @@
 .parent~div {
     background-color: brown;
     width: 100vw;
-    height: 10rem;
+    /* height: 10rem; */
     margin: 5px;
 }
 
@@ -57,12 +57,64 @@ p.sibling-2 {
     margin: 10px
 }
 
-.heading-div{
+.heading-div {
     width: 100vw;
-    height: 10rem;
+    /* height: 10rem; */
     background-color: #0000ff;
 }
-.heading-div+p{
-    margin-top: -10rem;
-    color:#fff
+
+.heading-div:hover {
+    background-color: orange;
+}
+
+.heading-div>p {
+    color: #fff;
+    font-size: 5em
+}
+
+.click-me {
+    color: orange;
+    background: rgb(227, 231, 38);
+    /* background-color: rgb(0, 0, 0, ); */
+}
+
+.click-me:active {
+    color: aqua
+}
+
+input:focus {
+    outline: none;
+    width: 15em;
+}
+
+p[style="color: green;"] {
+    color: aquamarine !important;
+}
+
+p[class~="heading"] {
+    color: aqua;
+}
+
+div.box {
+    width: 600px;
+    height: 600px;
+    background-color: red;
+}
+
+div.box>.inner-box {
+    background-color: pink;
+    /* border: 5px solid pink;
+    margin: 1px; */
+    /* height: 10px; */
+    /* height: 50%; */
+    padding: 100px
+}
+
+.inner-box-child {
+    /* border: 1px dotted black; */
+    border-top: 1px solid red;
+    border-radius: 5px;
+    /* margin: 100px; */
+    text-decoration: underline;
+
 }
