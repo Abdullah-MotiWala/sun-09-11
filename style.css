@@ -1,4 +1,4 @@
-/* id styleing does not override from class styling */
+/* id styleing does not override from class styling
 #second-p {
     background-color: green;
 }
@@ -25,7 +25,7 @@
 .parent>div {
     background-color: blue;
     /* height: 80%; */
-    width: 80%;
+width: 80%;
 }
 
 .parent>.child {
@@ -116,5 +116,95 @@ div.box>.inner-box {
     border-radius: 5px;
     /* margin: 100px; */
     text-decoration: underline;
+}
 
+*/ ul {
+    /* list-style-type: lower-greek */
+    /* list-style-position: outside; */
+    /* SHORT HAND */
+    list-style: lower-greek inside;
+    list-style-image: url("https://www.w3schools.com/cssref/donald.gif");
+    /* list-style-image: url("https://static.vecteezy.com/system/resources/previews/004/057/706/original/gold-star-decoration-free-vector.jpg") */
+}
+
+li {
+    margin: 10px 0px 0px 0px;
+    background: yellow;
+}
+
+.styled-table {
+    border: 1px solid black;
+    width: 50vw;
+    /* empty-cells: hide; */
+    /* border-spacing: 25px; */
+    border-collapse: collapse;
+
+    background-color: aquamarine;
+}
+
+.styled-table td {
+    background-color: red;
+    border: 1px solid black;
+    padding: 5px
+}
+
+.styled-ul li:hover {
+    cursor: not-allowed
+}
+
+
+div.red {
+    width: 5em;
+    height: 5em;
+    background-color: red;
+    position: relative;
+    top: 50px;
+    left: 50px
+}
+
+
+div.parent {
+    width: 7em;
+    height: 7em;
+    /* background-color: red; */
+    border: 2px solid red;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    background-color: transparent;
+}
+
+
+.box-child {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+}
+
+
+.fixed {
+    height: 3em;
+    background-color: green;
+    /* width: 100vw; */
+    position: sticky;
+    /* z-index: -1; */
+    top: 100px;
+}
+
+.wrapper {
+    /* position: relative; */
+    top:7em;
+    width: 50vw;
+    /* height: 10em; */
+    background-color: bisque;
+    z-index: 2;
+    border: 2em solid pink;
+}
+
+.fixed-sib {
+    border: 2px solid white;
+    height: 2em;
+    /* z-index: 5; */
+    width: 100%;
 }
