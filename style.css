@@ -188,18 +188,32 @@ div.parent {
     background-color: green;
     /* width: 100vw; */
     position: sticky;
-    /* z-index: -1; */
-    top: 100px;
+    z-index: 5;
+    top: 20px;
+}
+
+.non-fixed {
+    height: 3em;
+    background-color: green;
+    /* width: 100vw; */
+    /* position: sticky; */
+    z-index: 5;
+    top: 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
 }
 
 .wrapper {
     /* position: relative; */
-    top:7em;
-    width: 50vw;
+    /* top:7em; */
+    /* width: 50vw; */
     /* height: 10em; */
     background-color: bisque;
-    z-index: 2;
-    border: 2em solid pink;
+    /* z-index: 2; */
+    /* border: 2em solid pink; */
 }
 
 .fixed-sib {
