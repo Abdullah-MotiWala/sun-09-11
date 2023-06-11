@@ -1,8 +1,8 @@
 Login
 Item
-- Add
+- Add D
 - Edit
 - Delete
-- Read
-- increase
-- decrease
+- Read D
+- increase D
+- decrease D

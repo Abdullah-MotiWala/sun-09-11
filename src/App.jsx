@@ -1,9 +1,13 @@
 import { Fragment, } from "react"
 import "./App.css"
 import Home from "./components/HomePage"
+import Login from "./components/Login"
 
 function App() {
-  return <Home test={"test"}/>
+  return <Fragment>
+    {/* <Login /> */}
+    <Home />
+  </Fragment>
 }
 
 export default App
