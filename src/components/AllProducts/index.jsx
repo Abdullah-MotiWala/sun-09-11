@@ -10,7 +10,9 @@ const AllProducts = ({ items, setItems }) => {
 
     return (
         <div style={{ padding: "2rem", display: "flex", }}>
-            {items.length ? items.map((item) => <ProductCard item={item} key={item.id} setItems={setItems} items={items}/>) : 'No Item Found'}
+            {items.length 
+            ? items.map(item => <ProductCard item={item} key={item.id} setItems={setItems} items={items}/>) 
+            : 'No Item Found'}
         </div>
     )
 }

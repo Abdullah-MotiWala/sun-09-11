@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 
 const ProductCard = ({ item, setItems, items }) => {
+    // const { item, setItems, items } = props
     const [tempWeight, setTempWeight] = useState(0)
     const weightHandler = (isAddType) => {
         if (isAddType)

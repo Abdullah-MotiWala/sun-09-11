@@ -1,8 +1,6 @@
-Login
-Item
-- Add D
-- Edit
-- Delete
-- Read D
-- increase D
-- decrease D
+class
+state management
+routing
+Promises
+API Calls
+Clousers | Recursive

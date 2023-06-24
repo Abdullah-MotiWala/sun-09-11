@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { userData } from '../../../constants'
+import { loggInUser } from '../../redux/actions'
 import LoginView from './LoginView'
 
 const Login = () => {
+    const dispatch = useDispatch()
+    const authReducer = useSelector((state) => state)
+    console.log(authReducer)
+
+
 
     const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
@@ -20,7 +27,7 @@ const Login = () => {
                 throw new Error(errorMessage)
 
             alert("successfully logged in")
-
+            dispatch({ type: 'sginIn', payload: true })
         } catch (err) {
             alert(err.message)
         }
