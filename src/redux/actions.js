@@ -1,3 +1,2 @@
-export const loggInUser = (payload) => {
-    return { type: "sginIn", payload:payload }
-}
+// export const loginUser = (payload) => ({ type: 'signIn', payload })
+// export const signupUser = (payload) => ({ type: 'signUp', payload })
