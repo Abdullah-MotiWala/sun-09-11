@@ -1,0 +1,21 @@
+.text-input {
+    outline: none;
+    text-align: center;
+    padding: 2px;
+    font-size: 12px;
+    border: 0;
+    border-bottom: 2px solid grey;
+    margin: 6px;
+}
+
+label {
+    margin: 2rem;
+}
+
+
+.wrapper {
+    width: 100vw;
+    background-color: antiquewhite;
+    text-align: center;
+    padding-top: 40vh;
+}
