@@ -1,15 +1,14 @@
-import { Fragment, } from "react"
-import { Provider } from "react-redux"
+import { Route, Routes } from "react-router-dom"
 import "./App.css"
 import Home from "./components/HomePage"
 import Login from "./components/Login"
-import store from "./redux/store"
 
 function App() {
-  return <Provider store={store}>
-    {/* <Login /> */}
-    <Home />
-  </Provider>
+  const loginPath = "login"
+  return <Routes>
+    <Route path={loginPath} element={<Login />} />
+    <Route path={"/"} element={<Home />} />
+  </Routes>
 }
 
 export default App
