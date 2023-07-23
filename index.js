@@ -1,9 +1,4 @@
-// variable declaration = var
-// getting input = prompt("Any test")
-// showing result = alert("Value
+console.log("log")
 
-
-
-
-")
-// caculation 1 + 2
+for(let i =0;i<5;i++)
+    console.log(i)
