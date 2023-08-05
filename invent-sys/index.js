@@ -32,38 +32,43 @@ const userSchema = new Schema({
 const User = model("user", userSchema)
 
 // products api
-app.get("/product", (req, res) => {
-    const data = products
-    res.status(200).send({ data })
+app.get("/product", async (req, res) => {
+    const users = await User.find().select("-password")
+    res.status(200).send({ data: users })
 })
 
-app.post("/product", (req, res) => {
+app.post("/product", async (req, res) => {
     const body = req.body
-    console.log(body)
+
+    const user = new User(body)
+    await user.save()
+
     res.status(201).send({ message: "Product Added Successfully" })
 })
 
-app.get("/product/:id", (req, res) => {
+app.get("/product/:id", async (req, res) => {
     const id = req.params.id
-    const data = products.find((product) => product.id == id)
-    if (!data) {
-        res.status(404).send({ message: "Data not found" })
-        return
-    }
-    res.status(200).send({ data })
+    const user = await User.findById(id)
+    res.status(200).send({ data: user })
 })
 
-app.delete("/product/:id", (req, res) => {
-    // delte logic here
+app.delete("/product/:id", async (req, res) => {
+    const id = req.params.id
+    const user = await User.findByIdAndRemove(id)
 
-    res.status(200).send({ message: "Product Deleted Successfully" })
+    // const user = await User.findById(id)
+    // user.remove()
+
+    const users = await User.find()
+
+    res.status(200).send({ data: users })
 })
 
-app.put("/product/:id", (req, res) => {
-    // edit logic here
+// app.put("/product/:id", (req, res) => {
+//     // edit logic here
 
-    res.status(200).send({ message: "Product Edited Successfully" })
-})
+//     res.status(200).send({ message: "Product Edited Successfully" })
+// })
 
 app.get("/", (req, res) => {
     res.send("Hello World")
