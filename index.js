@@ -1,4 +1,18 @@
-console.log("log")
+import express, { json } from "express";
+import callDb from "./helpers/db.js";
+import userRouter from "./routes/users.js"
 
-for(let i =0;i<5;i++)
-    console.log(i)
+const app = express()
+app.use(json())
+callDb()
+
+app.use("/user", userRouter)
+
+app.get("/", (req, res) => {
+    res.send("Hello World")
+})
+
+
+app.listen(5000, () => {
+    console.log("App started")
+})
